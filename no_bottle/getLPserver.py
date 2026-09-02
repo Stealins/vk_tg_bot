@@ -14,7 +14,7 @@ data = {'group_id': 240182411,
 
 r = requests.get(url ='https://api.vk.com/method/groups.getLongPollServer', params = data)
 
-with open('getLPserver.json', 'w') as f: 
+with open('no_bottle/getLPserver.json', 'w') as f: 
     data = json.loads(r.text)
     formatted_json = json.dumps(data, indent = 4, ensure_ascii = False)   
     f.write(formatted_json)
